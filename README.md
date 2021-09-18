@@ -4,7 +4,7 @@
 
 ![Player](screenshots/1.png)
 
-Пример можно посмотреть на [GitHub Pages](https://alena-yudzina.github.io/player-layout/dist).
+Пример можно посмотреть на [GitHub Pages](https://alena-yudzina.github.io/player-layout/index.html).
 
 
 ### Цель проекта
