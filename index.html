@@ -3,12 +3,6 @@
 <head>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
-        button {
-            border-style: none;
-            cursor: pointer;
-            color: white;
-            background-color: transparent;
-        }
         div#player {
             width: 800px;
             height: 600px;
@@ -16,22 +10,26 @@
             display: flex;
             flex-direction: column;
         }
-        div.js-video-container {
+        .js-video-container {
             flex-grow: 10;
         }
-        div.empty {
+        .empty {
             width: 90%;
         }
-        div.bottons {
+        .buttons {
             background-color: black;
             flex-grow: 0;
             display: flex;
         }
-        .size {
+        .button {
             line-height: 20px;
             font-size: 15pt;
             padding: 3px;
             margin: 10px;
+            border-style: none;
+            cursor: pointer;
+            color: white;
+            background-color: transparent;
         }
     </style>
     <title>Player</title>
@@ -40,21 +38,21 @@
     <div id="player">
         <div class="js-video-container"></div>
         
-        <div class="bottons">
-            <button class="js-play-button size">
+        <div class="buttons">
+            <button class="js-play-button button">
                 <i class="fa fa-play" aria-hidden="true"></i>
             </button>
-            <button class="js-pause-button size">
+            <button class="js-pause-button button">
                 <i class="fa fa-pause" aria-hidden="true"></i>
             </button>
-            <button class="js-mute-button size">
+            <button class="js-mute-button button">
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
-            <button class="js-volume-button size">
+            <button class="js-volume-button button">
                 <i class="fa fa-volume-up" aria-hidden="true"></i>
             </button>
             <div class="empty"></div>
-            <button class="js-fullscreen-button size">
+            <button class="js-fullscreen-button button">
                 <i class="fa fa-expand" aria-hidden="true"></i>
             </button>
         </div>
