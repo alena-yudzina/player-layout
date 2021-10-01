@@ -3,25 +3,25 @@
 <head>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
     <style>
-        div#player {
+        .player {
             width: 800px;
             height: 600px;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.897);
             display: flex;
             flex-direction: column;
         }
-        .js-video-container {
+        .screen {
             flex-grow: 10;
         }
-        .empty {
+        .buttons-space {
             width: 90%;
         }
-        .buttons {
+        .buttons-area {
             background-color: black;
             flex-grow: 0;
             display: flex;
         }
-        .button {
+        .player-button {
             line-height: 20px;
             font-size: 15pt;
             padding: 3px;
@@ -35,24 +35,24 @@
     <title>Player</title>
 </head>
 <body>
-    <div id="player">
-        <div class="js-video-container"></div>
+    <div class="player" id="player">
+        <div class="js-video-container screen"></div>
         
-        <div class="buttons">
-            <button class="js-play-button button">
+        <div class="buttons-area">
+            <button class="js-play-button player-button">
                 <i class="fa fa-play" aria-hidden="true"></i>
             </button>
-            <button class="js-pause-button button">
+            <button class="js-pause-button player-button">
                 <i class="fa fa-pause" aria-hidden="true"></i>
             </button>
-            <button class="js-mute-button button">
+            <button class="js-mute-button player-button">
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
-            <button class="js-volume-button button">
+            <button class="js-volume-button player-button">
                 <i class="fa fa-volume-up" aria-hidden="true"></i>
             </button>
-            <div class="empty"></div>
-            <button class="js-fullscreen-button button">
+            <div class="buttons-space"></div>
+            <button class="js-fullscreen-button player-button">
                 <i class="fa fa-expand" aria-hidden="true"></i>
             </button>
         </div>
