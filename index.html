@@ -10,13 +10,13 @@
             display: flex;
             flex-direction: column;
         }
-        .screen {
+        .player-screen {
             flex-grow: 10;
         }
-        .buttons-space {
+        .player-middle-button-space {
             flex-grow: 30;
         }
-        .buttons-area {
+        .player-buttons-area {
             background-color: black;
             flex-grow: 0;
             display: flex;
@@ -24,22 +24,24 @@
         .player-button {
             line-height: 20px;
             font-size: 15pt;
-            padding: 3px;
-            margin: 10px;
+            padding: 5px;
+            margin: 5px;
             border-style: none;
             cursor: pointer;
             color: white;
             background-color: transparent;
             flex-grow: 1;
+            width: 30px;
+            height: 30px;
         }
     </style>
     <title>Player</title>
 </head>
 <body>
     <div class="player" id="player">
-        <div class="js-video-container screen"></div>
+        <div class="js-video-container player-screen"></div>
         
-        <div class="buttons-area">
+        <div class="player-buttons-area">
             <button class="js-play-button player-button">
                 <i class="fa fa-play" aria-hidden="true"></i>
             </button>
@@ -52,7 +54,7 @@
             <button class="js-volume-button player-button">
                 <i class="fa fa-volume-off" aria-hidden="true"></i>
             </button>
-            <div class="buttons-space"></div>
+            <div class="player-middle-button-space"></div>
             <button class="js-fullscreen-button player-button">
                 <i class="fa fa-expand" aria-hidden="true"></i>
             </button>
