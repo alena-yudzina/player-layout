@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <style>
         .player {
             width: 800px;
@@ -13,31 +16,58 @@
         .player-screen {
             flex-grow: 10;
         }
-        .player-middle-button-space {
-            flex-grow: 30;
-        }
-        .player-buttons-area {
+        .bottom-controls {
             background-color: black;
-            flex-grow: 0;
             display: flex;
             height: 43px;
         }
+        .left-buttons {
+            display: flex;
+            margin: 3px;
+            padding: 0px;
+            justify-content: space-between;
+
+        }
+        .right-buttons {
+            display: flex;
+            margin: 1px;
+            padding: 4px;
+
+        }
+        .viewing-panel {
+            display: flex;
+            margin: 10px;
+            padding: 1px;
+            flex-grow: 20;
+        }
         .player-button {
-            line-height: 0px;
             font-size: 20px;
-            padding-top: 0px;
-            padding-right: 0px;
-            padding-bottom: 2px;
-            padding-left: 0px;
-            margin-top: 0px;
-            margin-right: -2px;
-            margin-bottom: -1px;
-            margin-left: -1px;
             border-style: none;
             cursor: pointer;
             color: white;
             background-color: transparent;
+        }
+        .volume {
+            margin-top: 1px;
+            margin-left: 8px;
+            margin-bottom: 2px;
+        }
+        .player-time {
+            color: white;
+            font-family: 'Roboto', sans-serif;
+            font-size: 16px;
             flex-grow: 1;
+        }
+        .player-middle-button-space {
+            flex-grow: 30;
+        }
+        .time {
+            margin-top: 1px;
+            margin-left: -10px;
+        }
+        .duration {
+            margin-top: 1px;
+            margin-right: -31px;
         }
     </style>
     <title>Player</title>
@@ -46,25 +76,36 @@
     <div class="player" id="player">
         <div class="js-video-container player-screen"></div>
         
-        <div class="player-buttons-area">
-            <button class="js-play-button player-button">
-                <i class="fa fa-play" aria-hidden="true"></i>
-            </button>
-            <button class="js-pause-button player-button">
-                <i class="fa fa-pause" aria-hidden="true"></i>
-            </button>
-            <button class="js-mute-button player-button">
-                <i class="fa fa-volume-up" aria-hidden="true"></i>
-            </button>
-            <button class="js-volume-button player-button">
-                <i class="fa fa-volume-off" aria-hidden="true"></i>
-            </button>
-            <div class="player-middle-button-space"></div>
-            <button class="js-fullscreen-button player-button">
-                <i class="fa fa-expand" aria-hidden="true"></i>
-            </button>
+        <div class="bottom-controls">
+            <div class="left-buttons">
+                <button class="js-play-button player-button play">
+                    <i class="fa fa-play" aria-hidden="true"></i>
+                </button>
+                <button class="js-pause-button player-button play">
+                    <i class="fa fa-pause" aria-hidden="true"></i>
+                </button>
+                <button class="js-mute-button player-button volume">
+                    <i class="fa fa-volume-up" aria-hidden="true"></i>
+                </button>
+                <button class="js-volume-button player-button volume">
+                    <i class="fa fa-volume-off" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="viewing-panel">
+                <div class="player-time time">
+                    <span class="js-current-time"></span>
+                </div>
+                <div class="player-middle-button-space"></div>
+                <div class="player-time duration">
+                    <span class="js-duration"></span>
+                </div>
+            </div>
+            <div class="right-buttons">
+                <button class="js-fullscreen-button player-button">
+                    <i class="fa fa-expand" aria-hidden="true"></i>
+                </button>
+            </div>
         </div>
-
     </div>
     
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
