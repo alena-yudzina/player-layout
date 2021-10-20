@@ -80,7 +80,13 @@
             margin-top: 1px;
             margin-right: -31px;
         }
-        .time-position {
+        .progressbar-outside .time-position {
+            opacity: 0;
+            transition-property: opacity;
+            transition-duration: 300ms;
+            transition-timing-function: ease-out;
+        }
+        .progressbar-outside:hover .time-position {
             height: 8px;
             width: 8px;
             background-color: #f8104d;
@@ -91,6 +97,10 @@
             border-color: white;
             box-shadow: -2px 0px 2px black;
             align-self: center;
+            opacity: 1;
+            transition-property: opacity;
+            transition-duration: 300ms;
+            transition-timing-function: ease-in;
         }
     </style>
     <title>Player</title>
