@@ -66,12 +66,11 @@
             margin-right: 5px;
             border-radius: 3px;
             background-color: grey;
+            display: flex;
         }
         .progressbar-inside {
-            flex-grow: 30;
-            height: 5px;
             border-radius: 3px;
-            background-color: red;
+            background-color: #f8104d;
         }
         .time {
             margin-top: 1px;
@@ -80,6 +79,18 @@
         .duration {
             margin-top: 1px;
             margin-right: -31px;
+        }
+        .time-position {
+            height: 8px;
+            width: 8px;
+            background-color: #f8104d;
+            border-radius: 50%;
+            display: inline-block;
+            border-style: solid;
+            border-width: 3px;
+            border-color: white;
+            box-shadow: -2px 0px 2px black;
+            align-self: center;
         }
     </style>
     <title>Player</title>
@@ -109,6 +120,7 @@
                 </div>
                 <div class="js-progress progressbar-outside">
                     <div class="js-progress-slider progressbar-inside"></div>
+                    <div class="time-position"></div>
                 </div>
                 <div class="player-time duration">
                     <span class="js-duration"></span>
