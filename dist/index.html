@@ -80,13 +80,8 @@
             margin-top: 1px;
             margin-right: -31px;
         }
-        .progressbar-outside .time-position {
-            opacity: 0;
-            transition-property: opacity;
-            transition-duration: 300ms;
-            transition-timing-function: ease-out;
-        }
-        .progressbar-outside:hover .time-position {
+
+        .time-position {
             height: 8px;
             width: 8px;
             background-color: #f8104d;
@@ -97,10 +92,14 @@
             border-color: white;
             box-shadow: -2px 0px 2px black;
             align-self: center;
+            opacity: 0;
+            transition: 300ms;
+            transition-timing-function:ease-in;
+        }
+        .progressbar-outside:hover .time-position {
             opacity: 1;
-            transition-property: opacity;
-            transition-duration: 300ms;
-            transition-timing-function: ease-in;
+            transition: 300ms;
+            transition-timing-function:ease-out;
         }
     </style>
     <title>Player</title>
